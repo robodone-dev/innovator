@@ -1,1 +1,355 @@
+/背景色-白/
+.box_white {
+//padding: 0 1em;
+//margin: 2em 10;
+font-weight: bold;
+background: #FFFFFF;
+}
+/背景色-グレー/
+.box_gray {
+//padding: 0 1em;
+//margin: 2em 10;
+//font-weight: bold;
+background: #F6F6F6;
+}
+/フッター位置/
+.footerStyle{
+position : fixed;
+bottom : 0;
+left : 0;
+right : 0;
+height : 3%;
+background : linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0));
+z-index : 10;
+text-align : center;
+font-weight : bold;
+}
+/フッター文字/
+.hdStrSmall{
+font-size: 1.5vw;
+opacity: 0.25; /* 55％不透明度(＝45％透過) /
+color:glay;
+}
+/ INNOVATOR_LB_アコーディオン */
+.acd-check_lb{
+display: none;
+}
+.acd-waku_lb{
+position: relative;
+background: #0068b7;/背景見やすい用/
+display: block;
+height: 80px;
+weight: 100%;
+margin: 5px 0;
+}
+.acd-label_lb{
+position: absolute;
+//background: #000;
+color: #fff;
+height: 80px;
+left: 80px;
+font-size: 3rem;
+font-weight : bold;
+line-height:80px;
+}
+.acd-waku_lb:after{
+//background: #000;
+color: #FFF;
+box-sizing: border-box;
+font-family: "Font Awesome 5 Free";
+content: '\f055';
+font-weight: 900;
+font-size: 300%;
+display: block;
+line-height:80px;
+position: absolute;
+left: 15px;
+}
+.acd-content_lb{
+//border: 1px solid #333;
+display: block;
+height: 0;
+opacity: 0;
+transition: .5s;
+visibility: hidden;
+}
+.acd-check_lb:checked + .acd-waku_lb:after{
+content: '\f056';
+}
+.acd-check_lb:checked + .acd-waku_lb + .acd-content_lb{
+height: auto;
+opacity: 1;
+visibility: visible;
+}
 
+.work_mission{
+display: flex;
+}
+.work_item{
+//background: #0bd;
+color: #fff;
+}
+#work_item_robot{
+justify-content: center;
+}
+.work_item img{
+width: auto;//50vw;
+height: 40vw;
+}
+.work_item iframe{
+width: 300%;
+height: 40vw;
+}
+
+.g-slide{
+position: relative;
+/margin: 5px 0 5px 0;/
+padding-bottom: 56.25%;
+}
+.g-slide iframe {
+box-shadow: 2px 2px 10px;
+border: 0;
+width: 90%;
+height: 90%;
+position: absolute;
+left: 0;
+right: 0;
+margin: auto;
+/border-radius: 20px;/
+}
+
+/ベースカラー/
+#selfcheck-color
+{
+background: #5DcDE0;/背景色/
+}
+#python-color
+{
+background: #96A5D8;/背景色/
+}
+#robopy-color
+{
+background: #5069BE;/背景色/
+}
+#lookback-color
+{
+background: #505050;/背景色/
+}
+
+/モーダル/
+fieldset {
+display: flex;
+border:none;
+margin-bottom:10px;
+justify-content: center;
+}
+
+.modal-text-label-build{
+background-color: #97DBAE;
+width:75%;
+margin-right:10px;
+border-radius:14px;
+display:flex;
+cursor: pointer;
+}
+
+.modal-text-label-mission{
+background-color: #F4BBBB;
+width:75%;
+margin-right:10px;
+border-radius:14px;
+display:flex;
+cursor: pointer;
+}
+
+.modal-text-label-build img{
+margin:15px;
+max-width:70px;
+height:auto;
+}
+
+.modal-text-label-mission img{
+margin:15px;
+max-width:70px;
+height:auto;
+}
+
+.modal-text{
+width: 100%;
+height: 100%;
+text-decoration: none;
+padding-left:7px;
+color: #fff;
+font-size:20px;
+display: flex;
+align-items: center;
+text-align:left;
+}
+
+.modal {
+opacity: 0;
+visibility: hidden;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+text-align: left;
+background: rgba(0,0,0, .8);
+transition: opacity .25s ease;
+z-index: 5;
+}
+
+.modal::before {
+display: block;
+width: 100%;
+height: 100%;
+content: " ";
+position: absolute;
+/background: url("https://drive.google.com/uc?id=1pANAoEyHBa7sCbVh8xlPo5ZlRVDia1hY");*/
+background-size: cover;
+background-repeat: no-repeat;
+background-position: top center;
+background-attachment: fixed;
+opacity: .9; / 透過度を適宜指定してください */
+z-index: -1;
+}
+.modal__bg {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+cursor: pointer;
+}
+
+.modal-state {
+display: none;
+}
+
+.modal-state:checked + .modal {
+opacity: 1;
+visibility: visible;
+}
+
+.modal-state:checked + .modal .modal__inner {
+top: 0;
+}
+
+.modal__inner {
+transition: top .25s ease;
+position: absolute;
+top: -20%;
+right: 0;
+bottom: 0;
+left: 0;
+width: 95%;
+margin: auto;
+overflow: auto;
+background: rgba(0, 0, 0, 0);
+border-radius: 5px;
+padding: 8em 2em;
+height: auto;
+}
+
+.modal__close {
+position: absolute;
+right: 5em;
+top: 5em;
+width: 1.1em;
+height: 1.1em;
+cursor: pointer;
+}
+
+.modal__close:after,
+.modal__close:before {
+content: '';
+position: absolute;
+width: 8px;
+height: 2.5em;
+background: #e60033;
+font-weight: bold;
+display: block;
+transform: rotate(45deg);
+left: 50%;
+margin: -3px 0 0 -1px;
+top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+background: #aaa;
+}
+
+.modal__close:before {
+transform: rotate(-45deg);
+}
+.ECM_CheckboxInput {
+padding: 22px 15px;
+display: flex;
+align-items: center;
+cursor: pointer;
+background-color:#f6f6f6;
+border-radius:14px;
+width:100px;
+}
+
+.ECM_CheckboxInput-Input {
+margin: 0;
+width: 0;
+opacity: 0;
+}
+
+.ECM_CheckboxInput:hover > .ECM_CheckboxInput-DummyInput{
+transform: scale(1.1);
+}
+
+.ECM_CheckboxInput-Input:focus + .ECM_CheckboxInput-DummyInput{
+transform: scale(1.1);
+}
+
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput {
+background: rgba(60, 179, 113, 1);
+}
+
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput::before {
+content: "";
+display: block;
+position: absolute;
+top: 60%;
+left: 50%;
+width: 40%;
+height: 5px;
+border-radius: 2px;
+transform: translate(-6px, 5px) rotateZ(-135deg);
+transform-origin: 2px 2px;
+background: #FFFFFF;
+}
+
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput::after {
+content: "";
+display: block;
+position: absolute;
+top: 60%;
+left: 50%;
+width: 65%;
+height: 5px;
+border-radius: 2px;
+transform: translate(-6px, 5px) rotateZ(-45deg);
+transform-origin: 2px 2px;
+background: #FFFFFF;
+}
+
+.ECM_CheckboxInput-DummyInput {
+position: relative;
+top: 0;
+left: 0;
+margin:auto;
+display: block;
+width: 52px;
+height: 52px;
+border: solid 2px transparent;
+background: rgba(0, 0, 0, .15);
+border-radius: 50%;
+transition: all .15s linear;
+}
